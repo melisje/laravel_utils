@@ -1,6 +1,6 @@
 <?php
 
-namespace Melit\Form;
+namespace Melit\Utils;
 
 use Illuminate\Http\Request;
 
