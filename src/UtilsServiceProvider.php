@@ -28,6 +28,6 @@ class UtilsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->make('melit\utils\SettingsController');
+        $this->app->make('Melit\Utils\SettingsController');
     }
 }
