@@ -78,7 +78,7 @@ class Setting extends Model
                 return new Carbon($this->$field);
                 break;
             default:
-                return  $this->$field;
+                return $this->$field;
                 break;
         }
     }
