@@ -16,7 +16,11 @@
         }
     },
     "require": {
-
+      "laravel/framework": "^7.24",
+      "laravel/ui": "^2.1"
+    },
+    "require-dev": {
+      "crestapps/laravel-code-generator": "^2.4"
     },
     "extra": {
       "laravel": {

@@ -14,11 +14,6 @@ class UtilsServiceProvider extends ServiceProvider
     public function register()
     {
       $this->loadRoutesFrom(__DIR__.'/routes.php');
-      $this->loadMigrationsFrom(__DIR__.'/migrations');
-      $this->loadViewsFrom(__DIR__.'/views', 'utils');
-      $this->publishes([
-          __DIR__.'/views' => base_path('resources/views'),
-      ]);
     }
 
     /**
@@ -28,6 +23,16 @@ class UtilsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      $this->loadMigrationsFrom(__DIR__.'/migrations');
+      $this->loadFactoriesFrom(__DIR__.'/factories');
+      $this->loadTranslationsFrom(__DIR__.'/translations', 'utils');
+      $this->loadViewsFrom(__DIR__.'/views', 'utils');
+      $this->publishes([
+          __DIR__.'/views' => resource_path('views/melit/utils'),
+          __DIR__.'/translations' => resource_path('lang/melit/utils'),
+          __DIR__.'/assets' => public_path('vendor/melit/utils'),
+      ]);
+
         $this->app->make('Melit\Utils\SettingsController');
     }
 }

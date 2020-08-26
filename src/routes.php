@@ -7,3 +7,7 @@ Route::namespace('Melit\Utils')
         {
            Route::resource('/setting', 'SettingsController');
         });
+
+        Route::get('utils/admin', function () {
+            return view('utils::admin');
+        });
